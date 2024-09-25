@@ -1,0 +1,267 @@
+
+:root
+{
+
+    /* Colors */
+
+    /* Primary */
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+    /* Neutral */
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+/* Note for text colors: */
+
+/* 1. "Verified Graduate" has the same color as the person's name with 50% opacity */
+/* 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+
+--Font-size: 13px;
+
+ /* Font */
+
+/* - Family: [Barlow Semi Condensed]*/
+/* - Weights: 500, 600 */
+
+--family:'Barlow Semi Condensed';
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: var(--family);
+    background-color: var(--Light-grayish-blue);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+p{
+
+    margin: 0;
+    font-size: var(--Font-size);
+    opacity: 0.8;
+    word-break: normal;
+}
+
+main { 
+
+    display: grid;
+    grid-template-columns: 1fr;
+    color: var(--White);
+    gap: 10px;
+    margin: 0.5em ;
+   
+
+
+}
+
+main >div{
+
+  
+    padding: 1em;
+    border-radius: 10px;
+    
+}
+
+main >div:nth-of-type(1){
+    background-color: var(--Moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0 ;
+    background-size: auto;
+
+}
+
+main >div:nth-of-type(2){
+
+background-color: var(--Very-dark-grayish-blue);
+    
+}
+
+main >div:nth-of-type(3){
+
+    background-color: var(--White);
+    color: black;
+    
+}
+
+main >div:nth-of-type(4){
+
+    background-color: var(--Very-dark-blackish-blue);
+    
+}
+
+main >div:nth-of-type(5){
+
+    background-color: var(--White);
+    color: black;
+    
+}
+
+main .img-container 
+{
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+main .img-container img{
+
+width: 30px;  
+border-radius: 100%;
+border: 1px solid var(--Light-gray);  
+margin: 0 1em 0 0;
+}
+
+.img-container div :last-child {
+
+    font-size: 0.7rem;
+    opacity: 0.5;
+
+}   
+
+main >div >p:nth-of-type(1){
+
+    opacity: 0.7;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 120%;
+    margin: 0.8em auto;
+    text-indent: 1em;
+}
+
+main >div >p:nth-of-type(2){
+
+    opacity: 0.5;
+    text-indent: 1em;
+    
+}
+
+/* 480px */
+
+@media(min-width:30em){
+
+
+main{
+
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "one two" "one three" " five four" "five four" "five . ";
+}
+
+main >div:nth-of-type(1)
+{
+
+    grid-area: one;
+
+}
+
+main >div:nth-of-type(2)
+{
+
+    grid-area: two;
+
+}
+
+main >div:nth-of-type(3)
+{
+
+    grid-area: three;
+
+}
+
+main >div:nth-of-type(4)
+{
+
+    grid-area: four;
+
+}
+
+main >div:nth-of-type(5)
+{
+
+    grid-area: five;
+
+}
+
+
+}
+
+
+
+
+/* 800px */
+@media(min-width:50em)
+{
+
+
+main
+
+{
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "one one two five" "three four four five";
+    max-width: 60em;
+    margin: 0;
+    
+
+}
+
+main >div:nth-of-type(1)
+{
+
+    grid-area: one;
+
+}
+
+main >div:nth-of-type(2)
+{
+
+    grid-area: two;
+
+}
+
+main >div:nth-of-type(3)
+{
+
+    grid-area: three;
+
+}
+
+main >div:nth-of-type(4)
+{
+
+    grid-area: four;
+
+}
+
+main >div:nth-of-type(5)
+{
+
+    grid-area: five;
+
+}
+
+
+}
+
+footer{
+
+    margin-top: 1em;
+}
